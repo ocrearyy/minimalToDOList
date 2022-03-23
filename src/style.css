@@ -35,9 +35,10 @@
   background-color: #fff;
 }
 
-#paragraph-text {
+#input-text {
   margin-left: 10px;
   font-style: italic;
+  border: none;
 }
 
 #paragraph-icon {
@@ -58,6 +59,10 @@
   margin-bottom: 5px;
   padding-bottom: 15px;
   padding-top: 15px;
+}
+
+.plus-icon {
+  margin-right: 10px;
 }
 
 .li-icon {
