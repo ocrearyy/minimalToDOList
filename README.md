@@ -12,7 +12,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://oshanedesign.github.io/minimalToDOList/)
+[Live Demo Link]()
 
 
 ## Getting Started
