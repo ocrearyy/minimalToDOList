@@ -1,12 +1,26 @@
 import './style.css';
 
 import {addListListener} from './addNewTask.js';
-
-console.log('Hello webpack!');
-
+import {deleteItemListener} from './deleteATask.js';
 
 
+
+console.log('Hello webpack!'); 
 addListListener();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // const toDoListContainer = document.getElementById('to-do-list-container');
