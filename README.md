@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Minimal To DO List 
 
-> toDOList
+> A simple to do list that allows users to CRUD (Create read update and delete tasks)
 
 
 ## Built With
