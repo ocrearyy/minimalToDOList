@@ -128,7 +128,7 @@ export default class UI {
     const todos = Store.getTasks();
     todos.splice(index, 1);
     // updates indexes
-    todos.forEach((todo, index) => { todo.index = index; });
+    todos.forEach((todo, i) => { todo.index = i + 1; });
     Store.setTasks(todos);
     li.remove();
     if (todos.length === 0) {
