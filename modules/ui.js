@@ -1,7 +1,7 @@
 // /src/modules/ui.js - User Interface class: deals with manipulating the DOM
 
-import Task from './task';
-import Store from './store';
+import Task from './task.js';
+import Store from './store.js';
 
 export default class UI {
   static addTask2list(task) {
@@ -77,7 +77,7 @@ export default class UI {
 
     const p = document.createElement('p');
     p.className = 'noToDos';
-    p.textContent = "Please add task to list";
+    p.textContent = 'Please add task to list';
 
     item.appendChild(p);
     list.appendChild(item);
