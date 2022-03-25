@@ -1,52 +1,60 @@
-import './style.css';
+// /src/index.js - entry point
 
-import {addListListener} from './addNewTask.js';
-import {deleteItemListener} from './deleteATask.js';
+import './styles.css';
+import UI from './modules/ui';
+import { validateDescription } from './modules/helpfulFunctions';
 
+// Event: on content load
+document.addEventListener('DOMContentLoaded', UI.displayTasks());
 
+// Event: when form is submitted
+document.querySelector('#newTask').addEventListener('submit', (e) => {
+  e.preventDefault();
 
-console.log('Hello webpack!'); 
-addListListener();
+  // Get form values
+  const taskDescription = document.querySelector('#taskDesc').value.trim();
+  if (validateDescription(taskDescription)) {
+    // Add task
+    UI.addTask(taskDescription);
+  }
+  document.querySelector('#taskDesc').value = '';
+});
 
+// Event: when icon is clicked to add task
+document.querySelector('#clickEnterIcon').addEventListener('click', () => {
+  // Get form values
+  const taskDescription = document.querySelector('#taskDesc').value.trim();
+  if (validateDescription(taskDescription)) {
+    // Add task
+    UI.addTask(taskDescription);
+  }
+  document.querySelector('#taskDesc').value = '';
+});
 
+// Event: click anything on taskList
+document.querySelector('#taskList').addEventListener('click', (e) => {
+  const classesIcn = e.target.parentElement.className;
+  const classesArr = classesIcn.split(' ');
 
+  const li = e.target.parentElement.parentElement.parentElement;
+  // console.log(li);
+  const index = li.dataset.id - 1;
 
+  // Event: when the three dots icon gets clicked
+  if (classesArr.indexOf('edtIcn') !== -1) {
+    UI.changeLiToEditMode(li);
+  }
 
+  // Event: when the check icon gets clicked to REMOVE
+  if (classesArr.indexOf('removeIcn') !== -1) {
+    UI.removeTask(index, li);
+  }
 
-
-
-
-
-
-
-
-
-
-
-// const toDoListContainer = document.getElementById('to-do-list-container');
-
-// for (let i = 0; i < toDoTasks.length; i += 1) {
-//   toDoListContainer.innerHTML = `
-//     <div id="header-container">
-//         <h3 id="header-text">Today's To Do</h3>
-//         <i id="header-icon" class="fa-solid fa-arrows-rotate"></i>
-//         </div>
-//         <div id="paragraph-container">
-//             <p id="paragraph-text">Add to your list...</p>
-//             <i id="paragraph-icon" class="fa-solid fa-ellipsis-vertical"></i>
-//         </div>
-        
-//       <ul id="ul-container">  
-//           <div class="li-container"> 
-//             <li class="ul-li"><i class="fa-regular fa-square square"></i>${toDoTasks[0].description}</li>
-//             <i class="fa-solid fa-ellipsis-vertical li-icon"></i>
-//           </div> 
-//           <div class="li-container"> 
-//             <li class="ul-li"><i class="fa-regular fa-square square"></i>${toDoTasks[1].description}</li>
-//             <i class="fa-solid fa-ellipsis-vertical li-icon"></i>
-//           </div>
-//       </ul>
-//     <div>
-//         <p id="final-paragraph-text">Clear all completed</p>
-//     </div>`;
-// }
+  // Event: when the the trash icon gets clicked to UPDATE
+  if (classesArr.indexOf('acceptIcn') !== -1) {
+    const newDesc = document.querySelector('#inputEdit').value.trim();
+    if (validateDescription(newDesc)) {
+      UI.updateTask(index, newDesc, li);
+    }
+  }
+});
