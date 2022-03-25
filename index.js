@@ -8,7 +8,7 @@ import { validateDescription } from './modules/helpfulFunctions';
 document.addEventListener('DOMContentLoaded', UI.displayTasks());
 
 // Event: when form is submitted
-document.querySelector('#newTask').addEventListener('submit', (e) => 
+document.querySelector('#newTask').addEventListener('submit', (e) => {
   e.preventDefault();
 
   // Get form values
