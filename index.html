@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Tutorial</title>
-
-    <!-- Font Awesome API -->
-    <script src="https://kit.fontawesome.com/030a66e167.js" crossorigin="anonymous"></script>
-    <!-- Font Awesome API -->
-</head>
-<body>
-    <h1>To Do: List Structure</h1>
-    <section id="to-do-list-container">
-        <div id="header-container">
-            <h3 id="header-text">Today's To Do</h3>
-            <i id="header-icon" class="fa-solid fa-arrows-rotate"></i>
-            </div>
-            <div id="paragraph-container">
-                <input type="text" id="input-text" name="input-name" required minlength="2" maxlength="100" placeholder="Add to your list...">
-                <!-- <p id="paragraph-text">Add to your list...</p> -->
-                <i id="paragraph-icon" class="fa-solid fa-plus plus-icon"></i>
-            </div>
-            
-          <ul id="ul-container">  
-              
-          </ul>
-        <div>
-            <p id="final-paragraph-text">Clear all completed</p>
-        </div>
-    </section>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="myContainer">
+      <div class="blackSquare"></div>
+      <div class="mainContent">
+        <div id="todoApp">
+          <section class="title appItem">
+            <h2>Today's To Do</h2>
+            <a href="#" id="topTitle">
+              <i class="fas fa-sync-alt"></i>
+            </a>
+          </section>
+          <section class="forForm appItem">
+            <form id="newTask" class="taskForm">
+              <input type="text" name="description" id="taskDesc" placeholder="Add to your list..." class="txt-mPlus">
+              <a href="#" id="clickEnterIcon">
+                <i class="fas fa-sign-in-alt p-2"></i>
+            </a>
+            </form>
+          </section> <!-- .forForm -->
+          <section class="forTaskList">
+            <ul id="taskList"></ul>
+          </section>
+          <section class="clearAllBtn">
+            <a href="#" id="clearCompleted" class="txt-mLG">Clear all completed</a>
+          </section>
+        </div> <!-- .todoApp -->
+      </div> <!-- .mainContent -->
+      <div class="blackSquare ftr"></div>
+    </div>
+  </body>
 </html>
