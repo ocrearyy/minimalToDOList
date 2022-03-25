@@ -12,7 +12,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link]()
+[Live Demo Link](https://oshanedesign.github.io/minimalToDOList/)
 
 
 ## Getting Started
@@ -22,6 +22,8 @@ To get a local copy up and running follow these simple example steps.
 
 1. git clone git@github.com:oshanedesign/to-Do-List.git
 2. Cd into to-Do-List
+3. Run npm install to get project running locally
+4. Run npm start to get project running locally 
 
 
 ## Authors
