@@ -1,7 +1,7 @@
 // /src/modules/helpfulFunctions - handy funcitons
 
-import Store from './store';
-import returnsUncompleted from './returnsUncompleted';
+import Store from './store.js';
+import returnsUncompleted from './returnsUncompleted.js';
 
 // function to help validate input
 const validateDescription = (text) => {

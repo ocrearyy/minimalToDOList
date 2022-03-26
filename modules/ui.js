@@ -1,9 +1,9 @@
 // /src/modules/ui.js - User Interface class: deals with manipulating the DOM
 
-import Task from './task';
-import Store from './store';
-import taskCompleted from './checkboxes';
-import { clearCompleted } from './helpfulFunctions';
+import Task from './task.js';
+import Store from './store.js';
+import taskCompleted from './checkboxes.js';
+import { clearCompleted } from './helpfulFunctions.js';
 
 export default class UI {
   static addTask2list(task) {
@@ -80,7 +80,7 @@ export default class UI {
 
     const p = document.createElement('p');
     p.className = 'noToDos';
-    p.textContent = "Please Enter a Task";
+    p.textContent = 'Please Enter a Task';
 
     item.appendChild(p);
     list.appendChild(item);
