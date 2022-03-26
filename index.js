@@ -1,6 +1,6 @@
 // /src/index.js - entry point
 
-import './styles.css.js';
+import './styles.css';
 import UI from './modules/ui';
 import { validateDescription } from './modules/helpfulFunctions';
 
