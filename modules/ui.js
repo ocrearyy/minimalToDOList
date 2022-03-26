@@ -80,7 +80,7 @@ export default class UI {
 
     const p = document.createElement('p');
     p.className = 'noToDos';
-    p.textContent = "No to-do's right now";
+    p.textContent = "Please Enter a Task";
 
     item.appendChild(p);
     list.appendChild(item);
