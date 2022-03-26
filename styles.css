@@ -45,7 +45,6 @@ p {
   border-bottom: 1px grey solid;
 }
 
-
 .ftr {
   position: fixed;
   bottom: 0;
@@ -60,11 +59,11 @@ p {
   margin-top: 4em;
 }
 
-
 #todoApp {
   background-color: white;
   box-shadow: 0 4px 8px 0 grey, 0 6px 20px 0 grey;
   border: 1px grey solid;
+
   /* width: 70%;
   margin: auto;
   margin-top: 4em; */
