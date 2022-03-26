@@ -1,6 +1,6 @@
 // checkboxes.js
 
-import Store from './store';
+import Store from './store.js';
 
 // function to change isCompleted value of tasks
 const taskCompleted = (li) => {
